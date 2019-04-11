@@ -6,7 +6,7 @@ export MAKEFLAGS="-j9"
 export TERM_ITALICS=
 
 # TODO cleanup
-export PATH=$PATH:$HOME/Storage/Work/SystemScripts/active
+export PATH=$PATH:$HOME/.bin
 export PATH=$PATH:$HOME/Storage/Work/Tools/bin
 
 setopt RM_STAR_WAIT
