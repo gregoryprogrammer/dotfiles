@@ -1,0 +1,20 @@
+[Default Applications]
+application/epub+zip=mupdf.desktop;
+application/pdf=mupdf.desktop;
+audio/mpeg=mpv-audio.desktop;
+audio/ogg=mpv-audio.desktop
+audio/x-wav=mpv-audio.desktop
+image/png=sxiv.desktop;
+image/jpeg=sxiv.desktop;
+text/markdown=gvim.desktop;
+text/plain=gvim.desktop;
+text/x-c++src=gvim.desktop;
+video/quicktime=mpv.desktop;
+video/webm=mpv.desktop;
+video/x-flv=mpv.desktop
+video/x-matroska=mpv.desktop;
+video/x-msvideo=mpv.desktop;
+video/mp4=mpv.desktop
+text/x-mgcb=mgcb-editor.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop

@@ -1,0 +1,42 @@
+"mocp -G; cmus-remote -u"
+    XF86AudioPlay
+
+"mocp -r; cmus-remote -r"
+    XF86AudioPrev
+
+"mocp -f; cmus-remote -n"
+    XF86AudioNext
+
+"slock"
+    Scroll_Lock
+
+"scrot"
+    Print
+
+# "amixer set Master 2+"
+# "pamixer --sink 0 --increase 1"
+"pamixer_all_sinks_volume.sh increase 1"
+    XF86AudioRaiseVolume
+
+# "amixer set Master 2-"
+# "pamixer --sink 0 --decrease 1"
+"pamixer_all_sinks_volume.sh decrease 1"
+    XF86AudioLowerVolume
+
+# "amixer set Master toggle"
+# "amixer -D pulse set Master 1+ toggle"
+# "pamixer -t"
+"pamixer_all_sinks_volume.sh toggle"
+    XF86AudioMute
+
+"touchpad.sh"
+    XF86TouchpadToggle
+
+"xbacklight -inc 10"
+    m:0x0 + c:233
+    XF86MonBrightnessUp
+
+"xbacklight -dec 10"
+    m:0x0 + c:232
+    XF86MonBrightnessDown
+
