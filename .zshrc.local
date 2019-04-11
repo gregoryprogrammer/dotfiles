@@ -1,0 +1,34 @@
+export TERM="rxvt-unicode-256color"
+export BROWSER="chromium"
+export EDITOR="vim"
+export LESS='-R '
+export MAKEFLAGS="-j9"
+export TERM_ITALICS=
+
+# TODO cleanup
+export PATH=$PATH:$HOME/Storage/Work/SystemScripts/active
+export PATH=$PATH:$HOME/Storage/Work/Tools/bin
+
+setopt RM_STAR_WAIT
+setopt interactivecomments
+setopt CORRECT
+
+# FIXME noglob
+# setopt noglob
+
+alias ls="ls -F --color=auto"
+alias vcat=vimcat
+alias ssh='TERM=xterm /usr/bin/ssh'
+alias p=python3
+alias v=vim
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
+function virtual_env_prompt () {
+   REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
+}
+grml_theme_add_token  virtual-env -f virtual_env_prompt '%F{yellow}' '%f'
+zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host path vcs percent
+
+alias dotfiles='/usr/bin/git --git-dir=/home/gregory/.cfg/ --work-tree=/home/gregory'
