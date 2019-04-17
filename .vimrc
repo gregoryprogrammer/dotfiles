@@ -201,13 +201,13 @@ let g:closetag_filenames = "*.html,*.vue,*.xhtml,*.phtml,*.php,*.jsx"
 " Close vim if the only window left open is a NERDTree
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_confirm_extra_conf = 0
+
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_stop_completion = ['<C-m>']
-
-let g:UltiSnipsExpandTrigger="<C-l>"
-let g:UltiSnipsJumpForwardTrigger="<C-j>"
 
 let g:user_emmet_leader_key='<C-Y>'
