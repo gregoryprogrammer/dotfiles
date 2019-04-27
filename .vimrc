@@ -172,6 +172,7 @@ autocmd FileType make setlocal noexpandtab
 
 autocmd BufWritePost * GitGutter
 let g:gitgutter_realtime = 1
+set updatetime=100
 
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
