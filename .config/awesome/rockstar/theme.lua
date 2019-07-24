@@ -1,105 +1,51 @@
----------------------------
--- Default awesome theme --
----------------------------
+----------------------------
+-- Rockstar awesome theme --
+----------------------------
 
-local gruvbox          = {}
-gruvbox.dark           = {}
-gruvbox.light          = {}
+local colors            = {}
+colors.dark_red         = "#cc241d" --  1
+colors.dark_green       = "#98971a" --  2
+colors.dark_yellow      = "#d79921" --  3
+colors.dark_blue        = "#458588" --  4
+colors.dark_purple      = "#b16286" --  5
+colors.dark_aqua        = "#689d6a" --  6
+colors.light_gray       = "#a89984" --  7
+colors.dark_gray        = "#928374" --  8
+colors.light_red        = "#fb4934" --  9
+colors.light_green      = "#b8bb26" -- 10
+colors.light_yellow     = "#feb101" -- 11
+colors.light_blue       = "#83a598" -- 12
+colors.light_purple     = "#d3869b" -- 13
+colors.light_aqua       = "#8ec07c" -- 14
+colors.dark_orange      = "#d65d0e"
+colors.light_orange     = "#fe8019"
+colors.fg1              = "#ebdbb2"
+colors.fg2              = "#a89984"
+colors.bg1              = "#1d2021"
+colors.bg2              = "#504945"
 
--- gruvbox dark
+local theme             = {}
+theme.confdir           = os.getenv("HOME") .. "/.config/awesome/rockstar/"
 
-gruvbox.dark.dark_red       = "#cc241d" -- 1
-gruvbox.dark.dark_green     = "#98971a" -- 2
-gruvbox.dark.dark_yellow    = "#d79921" -- 3
-gruvbox.dark.dark_blue      = "#458588" -- 4
-gruvbox.dark.dark_purple    = "#b16286" -- 5
-gruvbox.dark.dark_aqua      = "#689d6a" -- 6
-gruvbox.dark.light_gray     = "#a89984" -- 7
-gruvbox.dark.dark_gray      = "#928374" -- 8
-gruvbox.dark.light_red      = "#fb4934" -- 9
-gruvbox.dark.light_green    = "#b8bb26" -- 10
-gruvbox.dark.light_yellow   = "#fabd2f" -- 11
-gruvbox.dark.light_blue     = "#83a598" -- 12
-gruvbox.dark.light_purple   = "#d3869b" -- 13
-gruvbox.dark.light_aqua     = "#8ec07c" -- 14
+theme.wallpaper         = theme.confdir .. "/background.png"
+theme.font              = "terminus 8"
 
-gruvbox.dark.dark_orange    = "#d65d0e"
-gruvbox.dark.light_orange   = "#fe8019"
+theme.bg_normal         = colors.bg1
+theme.bg_focus          = colors.light_yellow
+theme.bg_urgent         = colors.dark_red
+theme.bg_minimize       = colors.bg2
+theme.bg_systray        = theme.bg_normal
 
-gruvbox.dark.fg0            = "#fbf1c7"
-gruvbox.dark.fg1            = "#ebdbb2"
-gruvbox.dark.fg2            = "#d5c4a1"
-gruvbox.dark.fg3            = "#bdae93"
-gruvbox.dark.fg4            = "#a89984"
-gruvbox.dark.fg             = gruvbox.dark.fg1 -- 15
+theme.fg_normal         = colors.fg2
+theme.fg_focus          = colors.bg1
+theme.fg_urgent         = colors.fg1
+theme.fg_minimize       = theme.fg_normal
 
-gruvbox.dark.bg0            = "#282828"
-gruvbox.dark.bg0_h          = "#1d2021"
-gruvbox.dark.bg0_s          = "#32302f"
-gruvbox.dark.bg1            = "#3c3836"
-gruvbox.dark.bg2            = "#504945"
-gruvbox.dark.bg3            = "#665c54"
-gruvbox.dark.bg4            = "#7c6f64"
-gruvbox.dark.bg             = gruvbox.dark.bg0 -- 0
-
--- gruvbox light
-
-gruvbox.light.dark_red       = "#cc241d" -- 1
-gruvbox.light.dark_green     = "#98971a" -- 2
-gruvbox.light.dark_yellow    = "#d79921" -- 3
-gruvbox.light.dark_blue      = "#458588" -- 4
-gruvbox.light.dark_purple    = "#b16286" -- 5
-gruvbox.light.dark_aqua      = "#689d6a" -- 6
-gruvbox.light.light_gray     = "#7c6f64" -- 7
-gruvbox.light.dark_gray      = "#928374" -- 8
-gruvbox.light.light_red      = "#9d0006" -- 9
-gruvbox.light.light_green    = "#79740e" -- 10
-gruvbox.light.light_yellow   = "#b57614" -- 11
-gruvbox.light.light_blue     = "#076678" -- 12
-gruvbox.light.light_purple   = "#8f3f71" -- 13
-gruvbox.light.light_aqua     = "#427b58" -- 14
-
-gruvbox.light.dark_orange    = "#d65d0e"
-gruvbox.light.light_orange   = "#af3a03"
-
-gruvbox.light.fg0            = "#282828"
-gruvbox.light.fg1            = "#3c3836"
-gruvbox.light.fg2            = "#504945"
-gruvbox.light.fg3            = "#665c54"
-gruvbox.light.fg4            = "#7c6f64"
-gruvbox.light.fg             = gruvbox.light.fg1 -- 15
-
-gruvbox.light.bg0            = "#fbf1c7"
-gruvbox.light.bg0_h          = "#f9f5d7"
-gruvbox.light.bg0_s          = "#f2e5bc"
-gruvbox.light.bg1            = "#ebdbb2"
-gruvbox.light.bg2            = "#d5c4a1"
-gruvbox.light.bg3            = "#bdae93"
-gruvbox.light.bg4            = "#a89984"
-gruvbox.light.bg             = gruvbox.light.bg0 -- 0
-
-local theme            = {}
-theme.confdir          = os.getenv("HOME") .. "/.config/awesome/rockstar/"
-
-theme.wallpaper        = theme.confdir .. "/background.png"
-theme.font             = "terminus 8"
-
-theme.bg_normal        = gruvbox.dark.bg0_h
-theme.bg_focus         = gruvbox.dark.dark_blue
-theme.bg_urgent        = gruvbox.dark.dark_red
-theme.bg_minimize      = gruvbox.dark.bg2
-theme.bg_systray       = theme.bg_normal
-
-theme.fg_normal        = gruvbox.dark.fg4
-theme.fg_focus         = gruvbox.dark.bg0_h
-theme.fg_urgent        = gruvbox.dark.fg1
-theme.fg_minimize      = theme.fg_normal
-
-theme.useless_gap      = 5
-theme.border_width     = 1
-theme.border_normal    = gruvbox.dark.bg0_h
-theme.border_focus     = theme.bg_focus
-theme.border_marked    = gruvbox.dark.light_aqua
+theme.useless_gap       = 5
+theme.border_width      = 1
+theme.border_normal     = colors.bg1
+theme.border_focus      = theme.bg_focus
+theme.border_marked     = colors.light_aqua
 
 -- There are other variable sets
 -- overriding the default one when
