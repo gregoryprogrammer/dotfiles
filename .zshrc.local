@@ -11,6 +11,7 @@ export PATH=$PATH:$HOME/Storage/Tools/bin
 
 setopt RM_STAR_WAIT
 setopt interactivecomments
+setopt combining_chars
 setopt CORRECT
 
 # FIXME noglob
