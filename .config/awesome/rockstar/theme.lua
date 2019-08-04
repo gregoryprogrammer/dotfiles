@@ -28,7 +28,7 @@ local theme             = {}
 theme.confdir           = os.getenv("HOME") .. "/.config/awesome/rockstar/"
 
 theme.wallpaper         = theme.confdir .. "/background.png"
-theme.font              = "terminus 8"
+theme.font              = "Terminus (TTF) for Windows 9"
 
 theme.bg_normal         = colors.bg1
 theme.bg_focus          = colors.light_yellow
