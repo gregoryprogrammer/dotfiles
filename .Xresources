@@ -1,20 +1,20 @@
-Xft.dpi: 96
-Xft.autohint: false
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintfull
-Xft.hinting: true
-Xft.antialias: true
-Xft.rgba: rgb
+Xft.dpi:            96
+Xft.autohint:       false
+Xft.lcdfilter:      lcddefault
+Xft.hintstyle:      hintfull
+Xft.hinting:        true
+Xft.antialias:      true
+Xft.rgba:           rgb
 
-Xcursor.theme: Neutral
+Xcursor.theme:      Neutral
 
-*.font:                 -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
-*.boldFont:             -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
+*.font:             -xos4-terminus-medium-r-normal--12-120-72-72-c-60-iso10646-1
+*.boldFont:         -xos4-terminus-bold-r-normal--12-120-72-72-c-60-iso10646-1
 
 ! special
 *.foreground:       #ABB2BF
-*.background:       #171b23
-*.cursorColor:      #ABB2BF
+*.background:       #171B23
+*.cursorColor:      #EB5454
 *.highlightColor:   #3A3F4B
 
 ! black
