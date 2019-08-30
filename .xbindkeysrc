@@ -10,7 +10,7 @@
 "slock"
     Scroll_Lock
 
-"my_scrot.sh"
+"scrot"
     Print
 
 # "amixer set Master 2+"
