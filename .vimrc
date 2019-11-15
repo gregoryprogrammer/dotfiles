@@ -76,7 +76,7 @@ colorscheme onedark
 
 let g:airline_powerline_fonts = 1
 
-set guifont=Terminus\ 8
+set guifont=Terminus\ (TTF)\ for\ Windows\ 9
 
 " Turn off scrollbars
 set guioptions-=r  " remove right-hand scroll bar
