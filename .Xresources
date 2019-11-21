@@ -14,7 +14,7 @@ Xcursor.theme:      Neutral
 ! special
 *.foreground:       #ABB2BF
 *.background:       #171B23
-*.cursorColor:      #EB5454
+*.cursorColor:      #FEB101
 *.highlightColor:   #3A3F4B
 
 ! black
