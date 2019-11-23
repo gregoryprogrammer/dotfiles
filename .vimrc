@@ -56,7 +56,7 @@ Plug 'mattn/emmet-vim'
 " Theme
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -72,7 +72,10 @@ set t_Co=256
 set termguicolors
 set background=dark
 syntax on
-colorscheme onedark
+
+let g:gruvbox_italic = 0
+let g:gruvbox_invert_selection = 0
+colorscheme gruvbox
 
 let g:airline_powerline_fonts = 1
 
