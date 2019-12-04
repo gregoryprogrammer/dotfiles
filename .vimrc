@@ -44,6 +44,9 @@ Plug 'jdonaldson/vaxe'
 " Rust
 Plug 'rust-lang/rust.vim'
 
+" QML
+Plug 'peterhoeg/vim-qml'
+
 " OpenGL & GLSL
 "Plug 'beyondmarc/opengl.vim'
 Plug 'tikhomirov/vim-glsl'
