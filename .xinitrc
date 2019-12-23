@@ -1,7 +1,7 @@
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 setxkbmap -layout pl
-setxkbmap -option ctrl:nocaps &
+setxkbmap -option ctrl:swapcaps &
 xset r rate 150 25
 
 dispwin -d1 $HOME/.`hostname`.icm
