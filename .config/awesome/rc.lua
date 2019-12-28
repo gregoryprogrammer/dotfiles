@@ -50,7 +50,7 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/rockstar/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "st"
-dmenu_run = "dmenu_run"
+dmenu_run = "dmenu_run -fn terminus-8"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
