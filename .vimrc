@@ -101,6 +101,7 @@ let python_highlight_all = 1
 
 " Default haxe target
 "let g:vaxe_lime_target = "linux -neko -64"
+let g:vaxe_enable_airline_defaults = 0
 
 " toggle relative numbering, and set to absolute on loss of focus or insert mode
 set number
