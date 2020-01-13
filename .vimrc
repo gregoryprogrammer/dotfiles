@@ -51,11 +51,6 @@ Plug 'peterhoeg/vim-qml'
 "Plug 'beyondmarc/opengl.vim'
 Plug 'tikhomirov/vim-glsl'
 
-" Web
-Plug 'posva/vim-vue'
-Plug 'alvan/vim-closetag'
-Plug 'mattn/emmet-vim'
-
 " Theme
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
