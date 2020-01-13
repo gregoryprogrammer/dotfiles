@@ -61,6 +61,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 
+" Other
+Plug 'vim/killersheep'
+
 call plug#end()
 
 let mapleader = "\<Space>"
@@ -116,6 +119,7 @@ set nobackup
 set noswapfile
 set autowrite
 set autoread
+au CursorHold * checktime
 set encoding=utf-8
 set fileformat=unix
 
