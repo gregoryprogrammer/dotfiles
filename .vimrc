@@ -52,9 +52,8 @@ Plug 'peterhoeg/vim-qml'
 Plug 'tikhomirov/vim-glsl'
 
 " Theme
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
 
 " Other
 Plug 'vim/killersheep'
@@ -77,8 +76,6 @@ syntax on
 let g:gruvbox_italic = 0
 let g:gruvbox_invert_selection = 0
 colorscheme gruvbox
-
-let g:airline_powerline_fonts = 1
 
 set guifont=Terminus\ (TTF)\ for\ Windows\ 9
 
