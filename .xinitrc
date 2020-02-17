@@ -12,4 +12,8 @@ autocutsel -selection PRIMARY -fork &
 xbindkeys
 xmodmap $HOME/.Xmodmap
 
-exec /usr/bin/awesome >> /tmp/awesome_stdout.txt 2>> /tmp/awesome_stderr.txt
+feh --bg-center ~/.config/awesome/rockstar/background.png
+
+exec bspwm
+
+#exec /usr/bin/awesome >> /tmp/awesome_stdout.txt 2>> /tmp/awesome_stderr.txt
