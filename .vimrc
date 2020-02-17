@@ -115,6 +115,7 @@ set autoread
 au CursorHold * checktime
 set encoding=utf-8
 set fileformat=unix
+set fillchars+=vert:\ 
 
 set ruler
 set showcmd
