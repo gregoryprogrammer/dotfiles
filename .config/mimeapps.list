@@ -5,6 +5,7 @@ audio/mpeg=mpv-audio.desktop;
 audio/ogg=mpv-audio.desktop
 audio/x-wav=mpv-audio.desktop
 image/png=sxiv.desktop;
+image/jpeg=sxiv.desktop;
 text/plain=vim.desktop;
 text/x-c++src=vim.desktop;
 video/quicktime=mpv.desktop;
