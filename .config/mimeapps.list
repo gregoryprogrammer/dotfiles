@@ -1,0 +1,13 @@
+[Default Applications]
+application/epub+zip=mupdf.desktop;
+application/pdf=mupdf.desktop;
+audio/mpeg=mpv-audio.desktop;
+audio/ogg=mpv-audio.desktop
+audio/x-wav=mpv-audio.desktop
+image/png=sxiv.desktop;
+text/plain=vim.desktop;
+text/x-c++src=vim.desktop;
+video/quicktime=mpv.desktop;
+video/x-flv=mpv.desktop
+video/x-matroska=mpv.desktop;
+video/x-msvideo=mpv.desktop;
