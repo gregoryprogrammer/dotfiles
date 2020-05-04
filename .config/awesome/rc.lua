@@ -470,7 +470,7 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
-          "mpv",
+          -- "mpv",
           "MPlayer",
           "Flashplayerdebugger",
           "Wine",
