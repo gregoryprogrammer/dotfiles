@@ -75,6 +75,7 @@ syntax on
 let g:gruvbox_italic = 0
 let g:gruvbox_invert_selection = 0
 colorscheme gruvbox
+colorscheme gruvbox_tweaks
 
 set guifont=Terminus\ (TTF)\ for\ Windows\ 9
 
