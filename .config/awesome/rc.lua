@@ -1,4 +1,3 @@
--- GG: Based on Awesome 4.3
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -46,12 +45,12 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(os.getenv("HOME") .. "/.config/awesome/rockstar/theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "/rockstar/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
-dmenu_run = "dmenu_run -fn terminus-8"
 editor = os.getenv("EDITOR") or "vim"
+dmenu_run = "dmenu_run -fn terminus-8"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -63,6 +62,7 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
+    -- awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
@@ -470,16 +470,13 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
-          -- "mpv",
-          "MPlayer",
-          "Flashplayerdebugger",
           "Wine",
           "Arandr",
           "Blueman-manager",
           "Gpick",
           "Kruler",
           "MessageWin",  -- kalarm.
-          "-- Sxiv",
+          -- "Sxiv",
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
           "Wpa_gui",
           "veromix",
