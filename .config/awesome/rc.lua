@@ -342,6 +342,15 @@ globalkeys = gears.table.join(
 )
 
 clientkeys = gears.table.join(
+    awful.key({ modkey,           }, "b",
+        function (c)
+            if c.border_width ~= 0 then
+                c.border_width = 0
+            else
+                c.border_width = beautiful.border_width
+            end
+        end ,
+        {description = "toggle border", group = "client"}),
     awful.key({ modkey,           }, "f",
         function (c)
             c.fullscreen = not c.fullscreen
@@ -368,6 +377,11 @@ clientkeys = gears.table.join(
     awful.key({ modkey,           }, "m",
         function (c)
             c.maximized = not c.maximized
+            if c.maximized then
+                c.border_width = 0
+            else
+                c.border_width = beautiful.border_width
+            end
             c:raise()
         end ,
         {description = "(un)maximize", group = "client"}),
