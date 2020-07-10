@@ -15,15 +15,27 @@ function rockstar.unmaximize(c)
     end
 end
 
-function rockstar.maximize_the_only_client(c)
-    local t = client.focus and client.focus.first_tag or nil
-    if t then
-        local clients = t:clients()
+function rockstar.maximize_the_only_client_with_tag(tag)
+    if tag then
+        local clients = tag:clients()
         local count = 0
         for _ in pairs(clients) do count = count + 1 end
 
         if count == 1 then
-            rockstar.maximize(c)
+            rockstar.maximize(clients[1])
+        end
+    end
+end
+
+function rockstar.maximize_the_only_client()
+    local tag = client.focus and client.focus.first_tag or nil
+    if tag then
+        local clients = tag:clients()
+        local count = 0
+        for _ in pairs(clients) do count = count + 1 end
+
+        if count == 1 then
+            rockstar.maximize(clients[1])
         else
             for _, k in ipairs(clients) do
                 rockstar.unmaximize(k)
