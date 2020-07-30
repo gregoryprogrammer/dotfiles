@@ -219,7 +219,7 @@ Shuffle = yes
 #
 # Example:    Theme = laras_theme
 #
-Theme = nightly_theme
+Theme = black_orange
 
 # The theme used when running on an xterm.
 #
