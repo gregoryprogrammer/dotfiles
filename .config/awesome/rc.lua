@@ -342,6 +342,7 @@ globalkeys = gears.table.join(
 )
 
 clientkeys = gears.table.join(
+    -- Toggle borders
     awful.key({ modkey,           }, "b",
         function (c)
             if c.border_width ~= 0 then
@@ -491,7 +492,6 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
-          "Wine",
           "Arandr",
           "Blueman-manager",
           "Gpick",
@@ -499,6 +499,7 @@ awful.rules.rules = {
           "MessageWin",  -- kalarm.
           -- "Sxiv",
           "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
+          "Wine",
           "Wpa_gui",
           "veromix",
           "xtightvncviewer"},
@@ -533,20 +534,12 @@ client.connect_signal("manage", function (c)
     -- i.e. put it at the end of others instead of setting it master.
     -- if not awesome.startup then awful.client.setslave(c) end
 
-    rockstar.maximize_the_only_client()
-
     if awesome.startup
       and not c.size_hints.user_position
       and not c.size_hints.program_position then
         -- Prevent clients from being unreachable after screen count changes.
         awful.placement.no_offscreen(c)
     end
-end)
-
-client.connect_signal("unmanage", function (c)
-    -- Window disappears
-    local tag = awful.screen.focused().selected_tag
-    rockstar.maximize_the_only_client_with_tag(tag)
 end)
 
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
@@ -563,7 +556,7 @@ client.connect_signal("request::titlebars", function(c)
         end)
     )
 
-    awful.titlebar(c, {size = 14}) : setup {
+    awful.titlebar(c, {size = beautiful.titlebar_height}) : setup {
         { -- Left
             awful.titlebar.widget.iconwidget(c),
             buttons = buttons,
