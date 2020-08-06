@@ -232,6 +232,55 @@ root.buttons(gears.table.join(
 ))
 -- }}}
 
+
+-- {{{ Extra tag management (https://awesomewm.org/doc/api/classes/tag.html)
+local function add_tag()
+    awful.tag.add("new", {
+        screen = awful.screen.focused(),
+        layout = awful.layout.suit.floating }):view_only()
+end
+
+local function delete_tag()
+    local t = awful.screen.focused().selected_tag
+    if not t then return end
+    t:delete()
+end
+
+local function rename_tag()
+    awful.prompt.run {
+        prompt       = "New tag name: ",
+        textbox      = awful.screen.focused().mypromptbox.widget,
+        exe_callback = function(new_name)
+            if not new_name or #new_name == 0 then return end
+
+            local t = awful.screen.focused().selected_tag
+            if t then
+                t.name = new_name
+            end
+        end
+    }
+end
+
+local function move_to_new_tag()
+    local c = client.focus
+    if not c then return end
+
+    local t = awful.tag.add(c.class,{screen= c.screen })
+    c:tags({t})
+    t:view_only()
+end
+
+local function copy_tag()
+    local t = awful.screen.focused().selected_tag
+    if not t then return end
+
+    local clients = t:clients()
+    local t2 = awful.tag.add(t.name, awful.tag.getdata(t))
+    t2:clients(clients)
+    t2:view_only()
+end
+-- }}}
+
 -- {{{ Key bindings
 globalkeys = gears.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
@@ -340,17 +389,17 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "p", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"}),
 
-    -- Rename current tag
-    awful.key({ modkey, "Shift",  }, "r",
-              function ()
-                  awful.prompt.run {
-                    prompt       = "Rename current tag: ",
-                    text         = awful.tag.selected().name,
-                    textbox      = awful.screen.focused().mypromptbox.widget,
-                    exe_callback = function (s) awful.tag.selected().name = s end,
-                  }
-              end,
-              {description = "rename tag", group = "awesome"})
+    -- Extra tag management (https://awesomewm.org/doc/api/classes/tag.html)
+    awful.key({ modkey,           }, "a", add_tag,
+            {description = "add a tag", group = "tag"}),
+    awful.key({ modkey, "Shift"   }, "a", delete_tag,
+            {description = "delete the current tag", group = "tag"}),
+    awful.key({ modkey, "Control"   }, "a", move_to_new_tag,
+            {description = "add a tag with the focused client", group = "tag"}),
+    awful.key({ modkey, "Mod1"   }, "a", copy_tag,
+            {description = "create a copy of the current tag", group = "tag"}),
+    awful.key({ modkey, "Shift"   }, "r", rename_tag,
+            {description = "rename the current tag", group = "tag"})
 )
 
 clientkeys = gears.table.join(
