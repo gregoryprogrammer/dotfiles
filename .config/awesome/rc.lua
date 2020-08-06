@@ -338,7 +338,19 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+    -- Rename current tag
+    awful.key({ modkey, "Shift",  }, "r",
+              function ()
+                  awful.prompt.run {
+                    prompt       = "Rename current tag: ",
+                    text         = awful.tag.selected().name,
+                    textbox      = awful.screen.focused().mypromptbox.widget,
+                    exe_callback = function (s) awful.tag.selected().name = s end,
+                  }
+              end,
+              {description = "rename tag", group = "awesome"})
 )
 
 clientkeys = gears.table.join(
