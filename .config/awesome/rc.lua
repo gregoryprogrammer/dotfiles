@@ -265,7 +265,9 @@ local function move_to_new_tag()
     local c = client.focus
     if not c then return end
 
-    local t = awful.tag.add(c.class,{screen= c.screen })
+    local t = awful.tag.add(c.class, {
+        screen= c.screen,
+        layout = awful.layout.layouts[1]})
     c:tags({t})
     t:view_only()
 end
@@ -399,7 +401,41 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Mod1"   }, "a", copy_tag,
             {description = "create a copy of the current tag", group = "tag"}),
     awful.key({ modkey, "Shift"   }, "r", rename_tag,
-            {description = "rename the current tag", group = "tag"})
+            {description = "rename the current tag", group = "tag"}),
+
+    --  Move client to prev tag and switch to it
+    awful.key({ modkey, "Shift" }, "-",
+              function ()
+                  -- get current tag
+                  local t = client.focus and client.focus.first_tag or nil
+                  if t == nil then
+                      return
+                  end
+                  -- get previous tag (modulo 9 excluding 0 to wrap from 1 to 9)
+                  -- FIXME tag_count
+                  local tag_count = 9
+                  local tag = client.focus.screen.tags[(t.name - 2) % tag_count + 1]
+                  awful.client.movetotag(tag)
+                  awful.tag.viewprev()
+              end,
+              {description = "move client to previous tag and switch to it", group = "layout"}),
+
+    --  Move client to next tag and switch to it
+    awful.key({ modkey, "Shift" }, "=",
+              function ()
+                  -- get current tag
+                  local t = client.focus and client.focus.first_tag or nil
+                  if t == nil then
+                      return
+                  end
+                  -- get next tag (modulo 9 excluding 0 to wrap from 9 to 1)
+                  -- FIXME tag_count
+                  local tag_count = 9
+                  local tag = client.focus.screen.tags[(t.name % tag_count) + 1]
+                  awful.client.movetotag(tag)
+                  awful.tag.viewnext()
+              end,
+              {description = "move client to next tag and switch to it", group = "layout"})
 )
 
 clientkeys = gears.table.join(
