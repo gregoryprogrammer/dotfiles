@@ -4,7 +4,7 @@ import sys
 
 from PIL import Image
 
-color = '#feb101'
+color = 0xc7, 0x92, 0xea  # light purple from the Palenight theme
 
 filenames = [
     'rockstar/titlebar/sticky_normal_inactive.png',
@@ -60,7 +60,7 @@ for filename in filenames:
         print(pixel)
         _, _, _, a = pixel
         if a != 0:
-            pixel = 0xfe, 0xb1, 0x01, a
+            pixel = *color, a
         new_pixels.append(pixel)
 
     image.putdata(new_pixels)

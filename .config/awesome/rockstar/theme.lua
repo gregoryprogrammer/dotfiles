@@ -3,6 +3,9 @@
 ----------------------------
 
 local colors            = {}
+
+colors.main_color       = "#c792ea"  -- light purple from the Palenight theme
+
 colors.dark_red         = "#cc241d" --  1
 colors.dark_green       = "#98971a" --  2
 colors.dark_yellow      = "#d79921" --  3
@@ -24,6 +27,7 @@ colors.fg2              = "#a89984"
 colors.bg1              = "#1d2021"
 colors.bg2              = "#504945"
 
+
 local theme             = {}
 theme.confdir           = os.getenv("HOME") .. "/.config/awesome/rockstar/"
 
@@ -31,7 +35,7 @@ theme.wallpaper         = theme.confdir .. "/background.png"
 theme.font              = "Terminus (TTF) for Windows 9"
 
 theme.bg_normal         = colors.bg1
-theme.bg_focus          = colors.light_yellow
+theme.bg_focus          = colors.main_color
 theme.bg_urgent         = colors.dark_red
 theme.bg_minimize       = colors.bg2
 theme.bg_systray        = theme.bg_normal
