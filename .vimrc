@@ -52,6 +52,7 @@ Plug 'tikhomirov/vim-glsl'
 
 " Theme
 Plug 'morhetz/gruvbox'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
 
 " Other
@@ -72,10 +73,15 @@ set termguicolors
 set background=dark
 syntax on
 
-let g:gruvbox_italic = 0
-let g:gruvbox_invert_selection = 0
-colorscheme gruvbox
-colorscheme gruvbox_tweaks
+" let g:gruvbox_italic = 0
+" let g:gruvbox_invert_selection = 0
+" colorscheme gruvbox
+" colorscheme gruvbox_tweaks
+
+colorscheme palenight
+let g:lightline = { 'colorscheme': 'palenight' }
+" Italics for palenight
+" let g:palenight_terminal_italics=1
 
 set guifont=Terminus\ (TTF)\ for\ Windows\ 9
 
@@ -188,7 +194,7 @@ let NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '│'
 let g:NERDTreeDirArrowCollapsible = '→'
 
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "•",
     \ "Staged"    : "+",
     \ "Untracked" : "*",
