@@ -1,5 +1,13 @@
 local rockstar = {}
 
+function rockstar.length(arr)
+    local count = 0
+    for _ in pairs(arr) do
+        count = count + 1
+    end
+    return count
+end
+
 function rockstar.maximize(c)
     c.maximized = true
     c.border_width = 0

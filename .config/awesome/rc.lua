@@ -411,10 +411,10 @@ globalkeys = gears.table.join(
                   if t == nil then
                       return
                   end
-                  -- get previous tag (modulo 9 excluding 0 to wrap from 1 to 9)
-                  -- FIXME tag_count
-                  local tag_count = 9
-                  local tag = client.focus.screen.tags[(t.name - 2) % tag_count + 1]
+
+                  local tags_count = rockstar.length(awful.screen.focused().tags)
+                  local tag = client.focus.screen.tags[((t.index - 2) % tags_count) + 1]
+
                   awful.client.movetotag(tag)
                   awful.tag.viewprev()
               end,
@@ -428,10 +428,10 @@ globalkeys = gears.table.join(
                   if t == nil then
                       return
                   end
-                  -- get next tag (modulo 9 excluding 0 to wrap from 9 to 1)
-                  -- FIXME tag_count
-                  local tag_count = 9
-                  local tag = client.focus.screen.tags[(t.name % tag_count) + 1]
+
+                  local tags_count = rockstar.length(awful.screen.focused().tags)
+                  local tag = client.focus.screen.tags[(t.index % tags_count) + 1]
+
                   awful.client.movetotag(tag)
                   awful.tag.viewnext()
               end,
