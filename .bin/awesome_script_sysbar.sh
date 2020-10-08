@@ -20,7 +20,7 @@ for SINK in $SINKS; do
     MUTED=${PAMIXER% *}
     VOL=${PAMIXER##* }
 
-    if [[ -n $VAR ]]; then
+    if [[ -n $VOLUME ]]; then
         VOLUME="$VOLUME $SEP"
     fi
 
@@ -41,11 +41,35 @@ fi
 if ! command -v acpi &> /dev/null; then
     BATTERY="$SEP install acpi"
 else
-    BATTERY_STATE=$(acpi 2>&1)
-    if [[ $BATTERY_STATE == *"No support"* ]]; then
+    ACPI_OUTPUT=$(acpi 2>&1)
+    if [[ $ACPI_OUTPUT == *"No support"* ]]; then
         BATTERY=""
     else
-        BATTERY="$SEP TODO"
+
+        CHARGING=$(cut -f3 -d' ' <<< $ACPI_OUTPUT)
+        LEVEL=$(cut -f4 -d' ' <<< $ACPI_OUTPUT | tr -d %,)
+        REMAINING=$(cut -f5 -d' ' <<< $ACPI_OUTPUT)
+
+        case $CHARGING in
+            "Charging,")
+                STATE="↑"
+            ;;
+            "Discharging,")
+                STATE="↓"
+            ;;
+            "Full,")
+                STATE=""
+            ;;
+            "Unknown,")
+                STATE="?"
+            ;;
+        esac
+
+        BATTERY="$SEP bat$STATE $LEVEL"
+
+        if [[ -n $REMAINING ]]; then
+            BATTERY="$BATTERY → $REMAINING"
+        fi
     fi
 fi
 
