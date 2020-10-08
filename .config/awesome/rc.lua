@@ -313,8 +313,10 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
+    awful.key({ modkey,           }, "w", function() awful.util.spawn("rofi -show window") end,
+              {description = "show rofi window jump", group = "awesome"}),
+    awful.key({ modkey,           }, "e", function() awful.util.spawn("rofi -show run") end,
+              {description = "show rofi run command", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
