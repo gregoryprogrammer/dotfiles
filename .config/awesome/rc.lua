@@ -237,7 +237,7 @@ root.buttons(gears.table.join(
 local function add_tag()
     awful.tag.add("new", {
         screen = awful.screen.focused(),
-        layout = awful.layout.suit.floating }):view_only()
+        layout = awful.layout.suit.tile }):view_only()
 end
 
 local function delete_tag()
