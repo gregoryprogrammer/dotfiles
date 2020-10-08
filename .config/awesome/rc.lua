@@ -415,7 +415,8 @@ globalkeys = gears.table.join(
                   local tags_count = rockstar.length(awful.screen.focused().tags)
                   local tag = client.focus.screen.tags[((t.index - 2) % tags_count) + 1]
 
-                  awful.client.movetotag(tag)
+                  -- awful.client.movetotag(tag)
+                  client.focus:move_to_tag(tag)
                   awful.tag.viewprev()
               end,
               {description = "move client to previous tag and switch to it", group = "layout"}),
@@ -432,7 +433,8 @@ globalkeys = gears.table.join(
                   local tags_count = rockstar.length(awful.screen.focused().tags)
                   local tag = client.focus.screen.tags[(t.index % tags_count) + 1]
 
-                  awful.client.movetotag(tag)
+                  -- awful.client.movetotag(tag)
+                  client.focus:move_to_tag(tag)
                   awful.tag.viewnext()
               end,
               {description = "move client to next tag and switch to it", group = "layout"})
