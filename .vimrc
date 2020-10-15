@@ -51,7 +51,6 @@ Plug 'peterhoeg/vim-qml'
 Plug 'tikhomirov/vim-glsl'
 
 " Theme
-Plug 'morhetz/gruvbox'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
 
@@ -72,11 +71,6 @@ set t_Co=256
 set termguicolors
 set background=dark
 syntax on
-
-" let g:gruvbox_italic = 0
-" let g:gruvbox_invert_selection = 0
-" colorscheme gruvbox
-" colorscheme gruvbox_tweaks
 
 colorscheme palenight
 let g:lightline = { 'colorscheme': 'palenight' }
