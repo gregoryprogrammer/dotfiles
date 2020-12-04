@@ -568,6 +568,9 @@ colors:
 key_bindings:
   - { key: F5,       mods: Shift,   chars: "\x1b[28~"                  }
   - { key: F6,       mods: Shift,   chars: "\x1b[29~"                  }
+  - { key: J,        mods: Alt,     chars: "ê"                         }
+  - { key: K,        mods: Alt,     chars: "ë"                         }
+
 #key_bindings:
   # (Windows, Linux, and BSD only)
   #- { key: V,        mods: Control|Shift, action: Paste            }

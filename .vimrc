@@ -24,6 +24,7 @@ Plug 'majutsushi/tagbar'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'markonm/traces.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'machakann/vim-swap'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -115,7 +116,7 @@ set autoread
 au CursorHold * checktime
 set encoding=utf-8
 set fileformat=unix
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 
 set ruler
 set showcmd
