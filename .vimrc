@@ -208,4 +208,6 @@ let g:closetag_filenames = "*.html,*.vue,*.xhtml,*.phtml,*.php,*.jsx"
 " Close vim if the only window left open is a NERDTree
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+au BufWrite * :Autoformat
+
 let g:user_emmet_leader_key='<C-Y>'
