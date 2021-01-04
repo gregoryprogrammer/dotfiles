@@ -25,6 +25,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'markonm/traces.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'machakann/vim-swap'
+Plug 'Chiel92/vim-autoformat'
 
 " Snippets
 Plug 'SirVer/ultisnips'
