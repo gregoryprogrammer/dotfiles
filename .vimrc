@@ -209,6 +209,5 @@ let g:closetag_filenames = "*.html,*.vue,*.xhtml,*.phtml,*.php,*.jsx"
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 au BufWrite *.h,*.hpp,*.cc,*.cpp :Autoformat
-au BufWrite *.py :Autoformat
 
 let g:user_emmet_leader_key='<C-Y>'
