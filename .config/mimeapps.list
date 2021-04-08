@@ -16,3 +16,5 @@ video/x-matroska=mpv.desktop;
 video/x-msvideo=mpv.desktop;
 video/mp4=mpv.desktop
 text/x-mgcb=mgcb-editor.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
