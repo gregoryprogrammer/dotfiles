@@ -26,6 +26,7 @@ Plug 'markonm/traces.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'machakann/vim-swap'
 Plug 'Chiel92/vim-autoformat'
+Plug 'OmniSharp/omnisharp-vim'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -209,5 +210,8 @@ let g:closetag_filenames = "*.html,*.vue,*.xhtml,*.phtml,*.php,*.jsx"
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 au BufWrite *.h,*.hpp,*.cc,*.cpp :Autoformat
+au BufWrite *.go :Autoformat
+au BufWrite *.cs :OmniSharpCodeFormat
+au BufWrite *.cs :OmniSharpFixUsings
 
 let g:user_emmet_leader_key='<C-Y>'
