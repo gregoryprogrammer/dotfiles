@@ -27,6 +27,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'machakann/vim-swap'
 Plug 'Chiel92/vim-autoformat'
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'tpope/vim-endwise'
+Plug 'jiangmiao/auto-pairs'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -45,6 +47,10 @@ Plug 'jdonaldson/vaxe'
 
 " Rust
 Plug 'rust-lang/rust.vim'
+
+" Ruby
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 
 " QML
 Plug 'peterhoeg/vim-qml'
