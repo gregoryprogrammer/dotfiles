@@ -4,7 +4,7 @@ setxkbmap -layout pl
 setxkbmap -option ctrl:swapcaps &
 xset r rate 150 25
 
-dispwin -d1 $HOME/.`hostname`.icm
+# dispwin -d1 $HOME/.`hostname`.icm
 
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
