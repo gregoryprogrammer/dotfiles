@@ -28,7 +28,6 @@ Plug 'machakann/vim-swap'
 Plug 'Chiel92/vim-autoformat'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-endwise'
-Plug 'jiangmiao/auto-pairs'
 
 " Snippets
 Plug 'SirVer/ultisnips'

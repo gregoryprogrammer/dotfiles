@@ -1,0 +1,42 @@
+##############################################################################
+#
+# this is a modification of the
+# nightly theme by Wim Speekenbrink <w.speek@wanadoo.nl>
+#
+##############################################################################
+
+background           = blue    default
+frame                = blue    default bold
+window_title         = blue    default bold
+directory            = blue    default bold
+selected_directory   = black   cyan
+playlist             = blue    default bold
+selected_playlist    = black   cyan
+file                 = blue    default bold
+selected_file        = black   cyan
+marked_file          = yellow  default bold
+marked_selected_file = black   yellow  bold
+info                 = green   default bold
+selected_info        = black   cyan
+marked_info          = red     default bold
+marked_selected_info = black   yellow  bold
+status               = blue    default bold
+title                = green   default bold
+state                = blue    default bold
+current_time         = yellow  default bold
+time_left            = yellow  default bold
+total_time           = yellow  default bold
+time_total_frames    = blue    default bold
+sound_parameters     = yellow  default bold
+legend               = blue    default bold
+disabled             = black   red
+enabled              = blue    default bold
+empty_mixer_bar      = blue    default bold
+filled_mixer_bar     = black   yellow
+empty_time_bar       = blue    default bold
+filled_time_bar      = black   yellow
+entry                = green   default bold
+entry_title          = green   default bold
+error                = red     default bold
+message              = green   default bold
+plist_time           = green   default bold
