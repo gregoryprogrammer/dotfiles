@@ -14,55 +14,40 @@ Xcursor.theme:      Neutral
 ! special
 ! *.foreground:       #ABB2BF
 ! *.background:       #171B23
-*.foreground:       #D5C4A1
-*.background:       #282828
-*.cursorColor:      #FEB101
+*.foreground:       #D8DEE9
+*.background:       #292d3e
+! *.cursorColor:      #FEB101
+*.cursorColor:      #D8DEE9
 *.highlightColor:   #3A3F4B
 
 ! black
-! *.color0:           #171b23
-! *.color8:           #3E4452
-*.color0:           #282828
-*.color8:           #928374
+*.color0:           #3B4252
+*.color8:           #3B4252
 
 ! red
-! *.color1:           #E06C75
-! *.color9:           #BE5046
-*.color1:           #CC241D
-*.color9:           #FB4934
+*.color1:           #FF5370
+*.color9:           #FF5370
 
 ! green
-! *.color2:           #98C379
-! *.color10:          #98C379
-*.color2:           #98971A
-*.color10:          #B8BB26
+*.color2:           #A3BE8C
+*.color10:          #A3BE8C
 
 ! yellow
-! *.color3:           #E5C07B
-! *.color11:          #D19A66
-*.color3:           #D79921
-*.color11:          #FABD2F
+*.color3:           #EBCB8B
+*.color11:          #EBCB8B
 
 ! blue
-! *.color4:           #61AFEF
-! *.color12:          #61AFEF
-*.color4:           #458588
-*.color12:          #83A598
+*.color4:           #81A1C1
+*.color12:          #81A1C1
 
 ! magenta
-! *.color5:           #C678DD
-! *.color13:          #C678DD
-*.color5:           #B16286
-*.color13:          #D3869B
+*.color5:           #B48EAD
+*.color13:          #B48EAD
 
 ! cyan
-! *.color6:           #56B6C2
-! *.color14:          #56B6C2
-*.color6:           #689D6A
-*.color14:          #8EC07C
+*.color6:           #88C0D0
+*.color14:          #88C0D0
 
 ! white
-! *.color7:           #7B8290
-! *.color15:          #ABB2BF
-*.color7:           #A89984
-*.color15:          #EBDBB2
+*.color7:           #E5E9F0
+*.color15:          #E5E9F0
