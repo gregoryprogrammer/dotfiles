@@ -1,0 +1,4 @@
+configuration {
+    font: "Terminus (TTF) for Windows 9";
+}
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
