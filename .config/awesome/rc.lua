@@ -216,7 +216,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.textbox(' | '),
-            awful.widget.watch('bash -c awesome_script_sysbar.sh', 2),
+            awful.widget.watch('bash -c ,awesome-script-sysbar.sh', 2),
             wibox.widget.textbox(' | '),
             -- mykeyboardlayout,
             wibox.widget.systray(),

@@ -15,18 +15,18 @@
 
 # "amixer set Master 2+"
 # "pamixer --sink 0 --increase 1"
-"pamixer_all_sinks_volume.sh increase 1"
+",pamixer-all-sinks-volume.sh increase 1"
     XF86AudioRaiseVolume
 
 # "amixer set Master 2-"
 # "pamixer --sink 0 --decrease 1"
-"pamixer_all_sinks_volume.sh decrease 1"
+",pamixer-all-sinks-volume.sh decrease 1"
     XF86AudioLowerVolume
 
 # "amixer set Master toggle"
 # "amixer -D pulse set Master 1+ toggle"
 # "pamixer -t"
-"pamixer_all_sinks_volume.sh toggle"
+",pamixer-all-sinks-volume.sh toggle"
     XF86AudioMute
 
 "touchpad.sh"
