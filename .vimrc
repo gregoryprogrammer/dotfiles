@@ -82,6 +82,7 @@ syntax on
 
 colorscheme palenight
 let g:lightline = { 'colorscheme': 'palenight' }
+
 " Italics for palenight
 " let g:palenight_terminal_italics=1
 

@@ -4,28 +4,29 @@
 
 local colors            = {}
 
-colors.main_color       = "#c792ea"  -- light purple from the Palenight theme
+colors.main_color       = "#da863e"  -- light orange from the Apollo theme
 
-colors.dark_red         = "#cc241d" --  1
-colors.dark_green       = "#98971a" --  2
-colors.dark_yellow      = "#d79921" --  3
-colors.dark_blue        = "#458588" --  4
-colors.dark_purple      = "#b16286" --  5
-colors.dark_aqua        = "#689d6a" --  6
-colors.light_gray       = "#a89984" --  7
-colors.dark_gray        = "#928374" --  8
-colors.light_red        = "#fb4934" --  9
-colors.light_green      = "#b8bb26" -- 10
-colors.light_yellow     = "#feb101" -- 11
-colors.light_blue       = "#83a598" -- 12
-colors.light_purple     = "#d3869b" -- 13
-colors.light_aqua       = "#8ec07c" -- 14
-colors.dark_orange      = "#d65d0e"
-colors.light_orange     = "#fe8019"
-colors.fg1              = "#ebdbb2"
-colors.fg2              = "#a89984"
-colors.bg1              = "#1d2021"
-colors.bg2              = "#504945"
+colors.dark_red         = "#a53030" --  1
+colors.dark_green       = "#75a743" --  2
+colors.dark_yellow      = "#be772b" --  3
+colors.dark_blue        = "#4f8fba" --  4
+colors.dark_purple      = "#a23e8c" --  5
+colors.dark_aqua        = "#3c5e8b" --  6
+colors.light_gray       = "#a8b5b2" --  7
+colors.dark_gray        = "#577277" --  8
+colors.light_red        = "#cf573c" --  9
+colors.light_green      = "#a8ca58" -- 10
+colors.light_yellow     = "#de9e41" -- 11
+colors.light_blue       = "#73bed3" -- 12
+colors.light_purple     = "#c65197" -- 13
+colors.light_aqua       = "#a4dddb" -- 14
+
+colors.dark_orange      = "#de9e41"
+colors.light_orange     = "#e8c170"
+colors.fg1              = "#ebede9"
+colors.fg2              = "#a8b5b2"
+colors.bg1              = "#172038"
+colors.bg2              = "#1e1d39"
 
 
 local theme             = {}
