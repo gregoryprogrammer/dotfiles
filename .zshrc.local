@@ -7,13 +7,12 @@ export TERM_ITALICS=
 
 # Opt-out of .NET telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export PATH=$PATH:$HOME/.dotnet/tools
 
 export PATH=$PATH:$HOME/.bin
 export PATH=$PATH:$HOME/Storage/Tools/bin
 export PATH=$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin
-
-# Add .NET Core SDK tools
-export PATH=$PATH:$HOME/.dotnet/tools
+export PATH=$PATH:$HOME/.emacs.d/bin
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
@@ -21,10 +20,6 @@ setopt RM_STAR_WAIT
 setopt interactivecomments
 setopt combining_chars
 setopt CORRECT
-
-
-# FIXME noglob
-# setopt noglob
 
 alias ls="ls -F --color=auto"
 alias vcat=vimcat
@@ -41,7 +36,9 @@ function virtual_env_prompt () {
 grml_theme_add_token  virtual-env -f virtual_env_prompt '%F{yellow}' '%f'
 zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host path vcs percent
 
+# git init --bare $HOME/.cfg
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+# dotfiles config --local status.showUntrackedFiles no
 
 [ -e ~/.dircolors ] && eval $(dircolors -b ~/.dircolors) ||
     eval $(dircolors -b)
