@@ -50,3 +50,4 @@
 ;(unpin! t)
 
 (package! solaire-mode :disable t)
+(package! key-chord)

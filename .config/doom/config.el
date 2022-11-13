@@ -82,8 +82,16 @@
 )
 
 
-(setq doom-themes-enable-variable-pitch nil)
+(setq doom-themes-treemacs-enable-variable-pitch nil)
 
 (after! solaire-mode (solaire-global-mode -1))
 
 (setq display-line-numbers-type 'relative)
+
+;; Key bindings
+(map! :n "SPC f a" #'ff-find-other-file)
+
+;;Exit insert mode by pressing j and then j quickly
+(setq key-chord-two-keys-delay 0.02)
+(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+(key-chord-mode 1)
