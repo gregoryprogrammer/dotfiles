@@ -53,6 +53,7 @@ beautiful.init(gears.filesystem.get_configuration_dir() .. "/rockstar/theme.lua"
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vim"
+editor_gui = "emacsclient -c"
 dmenu_run = "dmenu_run -fn terminus-8"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -340,6 +341,8 @@ globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+              {description = "open a terminal", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "Return", function () awful.spawn(editor_gui) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
