@@ -53,7 +53,7 @@ beautiful.init(gears.filesystem.get_configuration_dir() .. "/rockstar/theme.lua"
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vim"
-editor_gui = "emacsclient -c"
+editor_gui = "doom run"
 dmenu_run = "dmenu_run -fn terminus-8"
 editor_cmd = terminal .. " -e " .. editor
 
