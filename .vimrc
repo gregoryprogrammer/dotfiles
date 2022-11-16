@@ -28,6 +28,7 @@ Plug 'machakann/vim-swap'
 Plug 'Chiel92/vim-autoformat'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-endwise'
+Plug 'aklt/plantuml-syntax'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -64,6 +65,7 @@ Plug 'itchyny/lightline.vim'
 
 " Other
 Plug 'vim/killersheep'
+Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
