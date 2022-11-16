@@ -44,3 +44,7 @@ alias dotfiles="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 [ -e ~/.dircolors ] && eval $(dircolors -b ~/.dircolors) ||
     eval $(dircolors -b)
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_RROT/bin:$PATH"
+eval "$(pyenv init -)"
