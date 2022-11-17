@@ -29,6 +29,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'tpope/vim-endwise'
 Plug 'aklt/plantuml-syntax'
+Plug 'psf/black'
 
 " Snippets
 Plug 'SirVer/ultisnips'
