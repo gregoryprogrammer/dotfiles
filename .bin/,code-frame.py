@@ -7,14 +7,28 @@
 #  * '--------------------------------------------------------------------------'
 #  */
 
+import argparse
 import sys
 
-def framed(text, width):
-    top = '.' + '-' * (width - 2) + '.'
-    mid = '|' + ' ' * (width - 2) + '|'
-    btm = "'" + '-' * (width - 2) + "'"
+parser = argparse.ArgumentParser()
+parser.add_argument("--lang", help="language", default="bash")
+parser.add_argument("--text", nargs="*")
+args = parser.parse_args()
 
-    rows = text.split(chr(0x0d))  # list of rows
+
+COMMENTING = {
+    "cpp": {"signs": ("\n/* ", " * ", " */"), "width": 76},
+    "bash": {"signs": ("# ", "# ", ""), "width": 77},
+}
+
+
+def make_framed(text, commenting):
+    width = commenting["width"]
+    top = "." + "-" * (width - 2) + "."
+    mid = "|" + " " * (width - 2) + "|"
+    btm = "'" + "-" * (width - 2) + "'"
+
+    rows = text.split(chr(0x0D))  # list of rows
     max_length = max(len(row) for row in rows)
     rows = [row.ljust(max_length) for row in rows]
 
@@ -22,34 +36,27 @@ def framed(text, width):
     result.append(top)
     result.append(mid)
     for row in rows:
-        result.append( '|' + row.center(width - 2) + '|')
+        result.append("|" + row.center(width - 2) + "|")
     result.append(mid)
     result.append(btm)
 
     return result
 
-def cpp_comment(rows):
+
+def comment(rows, commenting):
+    signs = commenting["signs"]
     result = []
-    result.append('')
-    result.append('/* ' + rows[0])
+    result.append(signs[0] + rows[0])
     for row in rows[1:]:
-        result.append(' * ' + row)
-    result.append(' */')
+        result.append(signs[1] + row)
+
+    if signs[2] != "":
+        result.append(signs[2])
     return result
 
-def python_comment(rows):
-    result = []
-    result.append('')
-    for row in rows:
-        result.append('# ' + row)
-    return result
 
-CPP_WIDTH = 76
-PYTHON_WIDTH = 77
-
-text = ' '.join(sys.argv[1:]).strip()
-
-print('\n'.join(cpp_comment(framed(text, CPP_WIDTH))))
-
-# TODO argparse python
-#  print('\n'.join(python_comment(framed(text, PYTHON_WIDTH))))
+commenting = COMMENTING.get(args.lang, "bash")
+text = " ".join(args.text).strip()
+framed = make_framed(text, commenting)
+output = "\n".join(comment(framed, commenting))
+print(output)
