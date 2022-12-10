@@ -6,6 +6,9 @@ set nocompatible
 " 4. Vim long and prosper
 "
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"
+" ln -s ~/.vimrc ~/.config/nvim/init.vim
 
 call plug#begin('~/.vim/plugged')
 
