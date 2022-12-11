@@ -28,6 +28,7 @@ alias vcat=vimcat
 alias ssh='TERM=xterm /usr/bin/ssh'
 alias p=python3
 alias v=nvim
+alias vim=nvim
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh

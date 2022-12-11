@@ -10,7 +10,7 @@ set nocompatible
 "
 " ln -s ~/.vimrc ~/.config/nvim/init.vim
 
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
