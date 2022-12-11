@@ -12,8 +12,11 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 " My custom vim files
-Plug 'gregoryprogrammer/delorean.vim'
+"Plug 'gregoryprogrammer/delorean.vim'
 
 " Editor & project managment
 Plug 'scrooloose/nerdcommenter'
