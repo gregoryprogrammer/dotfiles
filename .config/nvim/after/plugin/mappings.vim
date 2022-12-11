@@ -10,7 +10,6 @@ nnoremap <Leader>Q :q!<cr>
 nnoremap <Leader>fs :w<cr>
 nnoremap <Leader>fe :Explore<cr>
 
-nnoremap <Leader>fo :BufExplorer<cr>
 " Kill buffer
 nnoremap <Leader>fk :bp\|bd #<cr>
 nnoremap <Leader>fn :vnew<cr>
@@ -23,10 +22,19 @@ nnoremap <Leader>fa :A<cr>
 nnoremap <Leader>jf :Autoformat<cr>
 nnoremap <F3> :Autoformat<cr>
 
-nnoremap <Leader>ft :NERDTreeFocus<cr>
-nnoremap <Leader>fT :NERDTreeToggle<cr>
-nnoremap <Leader>fr :NERDTreeRefreshRoot<cr>
-nnoremap <Leader>ff :NERDTreeFind<cr>
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>fo :BufExplorer<cr>
+
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+
+nnoremap <Leader>fto :NERDTreeFocus<cr>
+nnoremap <Leader>ftt :NERDTreeToggle<cr>
+nnoremap <Leader>ftr :NERDTreeRefreshRoot<cr>
+nnoremap <Leader>ftf :NERDTreeFind<cr>
 
 nnoremap <leader>tn :tabnew<cr>
 nnoremap <leader>tn :tabnew<cr>
@@ -85,7 +93,6 @@ noremap <Right> <Nop>
 set pastetoggle=<F6>
 nmap <Tab> <C-w>w
 
-nnoremap <C-p> :FZF<cr>
 
 inoremap jj <ESC>
 
