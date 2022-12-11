@@ -27,13 +27,13 @@ alias ls="ls -F --color=auto"
 alias vcat=vimcat
 alias ssh='TERM=xterm /usr/bin/ssh'
 alias p=python3
-alias v=vim
+alias v=nvim
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 function virtual_env_prompt () {
-   REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
+    REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
 }
 grml_theme_add_token  virtual-env -f virtual_env_prompt '%F{yellow}' '%f'
 zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host path vcs percent
