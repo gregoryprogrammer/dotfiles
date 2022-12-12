@@ -8,7 +8,6 @@ set nocompatible
 " curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 call plug#begin()
-
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
@@ -89,7 +88,7 @@ let g:lightline = { 'colorscheme': 'palenight' }
 " Italics for palenight
 " let g:palenight_terminal_italics=1
 
-set guifont=Terminus\ (TTF)\ for\ Windows\ 9
+set guifont=Terminus\ (TTF)\ for\ Windows:h14
 
 " Turn off scrollbars
 set guioptions-=r  " remove right-hand scroll bar

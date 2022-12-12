@@ -23,10 +23,10 @@ nnoremap <Leader>jf :Autoformat<cr>
 nnoremap <F3> :Autoformat<cr>
 
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>ff <cmd>Telescope find_files theme=ivy<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep theme=ivy<cr>
+nnoremap <leader>fb <cmd>Telescope buffers theme=ivy<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags <cr>
 nnoremap <leader>fo :BufExplorer<cr>
 
 nnoremap <Leader>ft :NERDTreeFocus<cr>
@@ -41,6 +41,23 @@ nnoremap <leader>tt :tabs<cr>
 
 " Buffer
 nnoremap <Leader>br :call RefreshBuffer()<cr>
+
+" .-----.
+" | Git |
+" '-----'
+"
+nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
+nnoremap <Leader>gH :GitGutterPrevHunk<CR>
+nnoremap <Leader>gh :GitGutterNextHunk<CR>
+nnoremap <Leader>gu :GitGutterUndoHunk<CR>
+nnoremap <Leader>gg :GitGutterStageHunk<CR>
+nnoremap <Leader>gd :Git diff<CR>
+nnoremap <leader>gs <cmd>Telescope git_status <cr>
+nnoremap <leader>fo :BufExplorer<cr>
+nnoremap <Leader>gb :Git blame<CR>
+nnoremap <Leader>gq :pclose<CR>
+
+
 
 "  .--------------------------------------------------------------------------.
 "  |                                                                          |
@@ -168,20 +185,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
-
-" .-----.
-" | Git |
-" '-----'
-"
-nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
-nnoremap <Leader>gH :GitGutterPrevHunk<CR>
-nnoremap <Leader>gh :GitGutterNextHunk<CR>
-nnoremap <Leader>gu :GitGutterUndoHunk<CR>
-nnoremap <Leader>gg :GitGutterStageHunk<CR>
-nnoremap <Leader>gd :Git diff<CR>
-nnoremap <Leader>gs :Git status<CR>
-nnoremap <Leader>gb :Git blame<CR>
-nnoremap <Leader>gq :pclose<CR>
 
 "  .--------------------------------------------------------------------------.
 "  |                                                                          |
