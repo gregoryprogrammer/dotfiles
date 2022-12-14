@@ -223,3 +223,6 @@ au BufWrite *.cs :OmniSharpCodeFormat
 au BufWrite *.cs :OmniSharpFixUsings
 
 let g:user_emmet_leader_key='<C-Y>'
+
+" Black
+let g:black_linelength = 120

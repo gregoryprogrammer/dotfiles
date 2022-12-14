@@ -108,7 +108,6 @@ noremap <Right> <Nop>
 set pastetoggle=<F6>
 nmap <Tab> <C-w>w
 
-
 inoremap jj <ESC>
 
 " Move lines downward and upward
@@ -130,8 +129,6 @@ vnoremap : ;
 nnoremap j gj
 nnoremap k gk
 
-" Remove all trailing whitespace
-nnoremap <Leader>js :%s/\s\+$//e<cr>
 
 "  .--------------------------------------------------------------------------.
 "  |                                                                          |
@@ -191,8 +188,11 @@ nnoremap <C-L> <C-W><C-L>
 "  |                               Code format                                |
 "  |                                                                          |
 "  '--------------------------------------------------------------------------'
-"
-nnoremap <Leader>lj :%!python3 -m json.tool --indent 2<CR>
+
+" Remove all trailing whitespace
+nnoremap <Leader>js :%s/\s\+$//e<cr>
+autocmd FileType json nnoremap <Leader>jl :%!python3 -m json.tool --indent 2<CR>
+autocmd FileType python nnoremap <Leader>jl :Black<CR>
 
 " .---------------.
 " | YouCompleteMe |
