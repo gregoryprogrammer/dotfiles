@@ -17,7 +17,7 @@ args = parser.parse_args()
 
 
 COMMENTING = {
-    "cpp": {"signs": ("\n/* ", " * ", " */"), "width": 76},
+    "cpp": {"signs": ("/* ", " * ", " */\n"), "width": 76},
     "bash": {"signs": ("# ", "# ", ""), "width": 77},
 }
 
