@@ -1,6 +1,6 @@
 export TERM="xterm-256color"
 export BROWSER="google-chrome-stable"
-export EDITOR="vim"
+export EDITOR="nvim"
 export LESS='-R '
 export MAKEFLAGS="-j9"
 export TERM_ITALICS=
