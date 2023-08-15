@@ -39,8 +39,8 @@ function virtual_env_prompt () {
 grml_theme_add_token  virtual-env -f virtual_env_prompt '%F{yellow}' '%f'
 zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host path vcs percent
 
-# git init --bare $HOME/.cfg
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+# git init --bare $HOME/.dotfiles
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 # dotfiles config --local status.showUntrackedFiles no
 
 [ -e ~/.dircolors ] && eval $(dircolors -b ~/.dircolors) ||
