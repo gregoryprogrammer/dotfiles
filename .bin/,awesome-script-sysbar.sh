@@ -31,6 +31,17 @@ for SINK in $SINKS; do
     fi
 done
 
+# Brightness
+NVIDIA_BRIGHTNESS="/sys/class/backlight/nvidia_0/brightness"
+INTEL_BRIGHTNESS="/sys/class/backlight/intel/brightness"
+
+if [ -f "$NVIDIA_BRIGHTNESS" ]; then
+    BRIGHTNESS_VALUE=$(cat $NVIDIA_BRIGHTNESS)
+else
+    BRIGHTNESS_VALUE=$(cat $INTEL_BRIGHTNESS)
+fi
+BRIGHTNESS="$SEP br $BRIGHTNESS_VALUE"
+
 # CapsLock state
 CAPSLOCK_STATE=$(xset -q | grep Caps | tr -s ' ' | cut -f5 -d' ')
 if [[ "$CAPSLOCK_STATE" == "on" ]]; then
@@ -73,5 +84,5 @@ else
     fi
 fi
 
-OUTPUT="$CORES $SEP $VOLUME $CAPSLOCK $BATTERY"
+OUTPUT="$CORES $SEP $VOLUME $BRIGHTNESS $CAPSLOCK $BATTERY"
 echo $OUTPUT

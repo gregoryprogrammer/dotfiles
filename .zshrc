@@ -2,7 +2,7 @@ export TERM="xterm-256color"
 export BROWSER="google-chrome-stable"
 export EDITOR="nvim"
 export LESS='-R '
-export MAKEFLAGS="-j9"
+export MAKEFLAGS="-j21"
 export TERM_ITALICS=
 
 # Opt-out of .NET telemetry
