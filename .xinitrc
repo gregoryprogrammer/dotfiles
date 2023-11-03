@@ -1,5 +1,7 @@
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+
 setxkbmap -layout pl
 setxkbmap -option ctrl:swapcaps &
 xset r rate 150 25
@@ -10,10 +12,7 @@ autocutsel -selection PRIMARY -fork &
 xbindkeys
 xmodmap $HOME/.Xmodmap
 
-source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
-
 eval $(ssh-agent)
 
 exec /usr/bin/awesome >> /tmp/awesome_stdout.txt 2>> /tmp/awesome_stderr.txt
