@@ -34,6 +34,10 @@ size = 9.0
 family = "Terminus (TTF) for Windows"
 style = "Regular"
 
+[font.italic]
+family = "Terminus (TTF) for Windows"
+style = "Regular"
+
 [[keyboard.bindings]]
 chars = "\u001B[28~"
 key = "F5"
