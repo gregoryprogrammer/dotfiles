@@ -4,7 +4,8 @@
 
 local colors            = {}
 
-colors.main_color       = "#da863e"  -- light orange from the Apollo theme
+-- colors.main_color       = "#da863e"  -- light orange from the Apollo theme
+colors.main_color       = "#2ac3de"  -- turquoise
 
 colors.dark_red         = "#a53030" --  1
 colors.dark_green       = "#75a743" --  2

@@ -6,6 +6,7 @@ from PIL import Image
 
 color = 0xc7, 0x92, 0xea  # light purple from the Palenight theme
 color = 0xda, 0x86, 0x3e  # light orange from the Apollo theme
+color = 0x2a, 0xc3, 0xde  # turquoise
 
 filenames = [
     'rockstar/titlebar/sticky_normal_inactive.png',
